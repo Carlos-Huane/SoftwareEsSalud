@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControladorGestionarCitas implements ActionListener {
+    
     private GestionarCitas VentanaGestionarCitas = new GestionarCitas();
     private Historial VentanaHistorial = new Historial();
     
