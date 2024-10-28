@@ -84,7 +84,7 @@ public class Usuario {
         if (dni.equalsIgnoreCase("111111") && contraseña.equalsIgnoreCase("111111")) {
             return 1;
         }
-        //usuario paciente para dni y contraseña "111111"
+        //usuario paciente para dni y contraseña "222222"
         if (dni.equalsIgnoreCase("222222") && contraseña.equalsIgnoreCase("222222")){
             return 2;
         }

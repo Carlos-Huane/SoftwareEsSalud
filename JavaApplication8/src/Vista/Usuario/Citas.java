@@ -31,8 +31,10 @@ public class Citas extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btnInicio = new javax.swing.JButton();
-        btnCerrarsesion = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        txtNombre1 = new javax.swing.JTextField();
+        txtApellido1 = new javax.swing.JTextField();
+        btnCerrarsesion = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnAgendar = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -51,21 +53,51 @@ public class Citas extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pngwing.com (3) (1).png"))); // NOI18N
 
+        btnInicio.setBackground(new java.awt.Color(102, 255, 255));
+        btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(0, 51, 51));
         btnInicio.setText("INICIO");
+        btnInicio.setBorder(null);
         btnInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInicioActionPerformed(evt);
             }
         });
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/images (1).png"))); // NOI18N
+
+        txtNombre1.setBackground(new java.awt.Color(102, 255, 255));
+        txtNombre1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtNombre1.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombre1.setText("Carlos Roberto ");
+        txtNombre1.setBorder(null);
+        txtNombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombre1ActionPerformed(evt);
+            }
+        });
+
+        txtApellido1.setBackground(new java.awt.Color(102, 255, 255));
+        txtApellido1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtApellido1.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellido1.setText("Garcia Lopez");
+        txtApellido1.setBorder(null);
+        txtApellido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellido1ActionPerformed(evt);
+            }
+        });
+
+        btnCerrarsesion.setBackground(new java.awt.Color(102, 255, 255));
+        btnCerrarsesion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCerrarsesion.setForeground(new java.awt.Color(0, 51, 51));
         btnCerrarsesion.setText("CERRAR SESION");
+        btnCerrarsesion.setBorder(null);
         btnCerrarsesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCerrarsesionActionPerformed(evt);
             }
         });
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/images (1).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -81,14 +113,22 @@ public class Citas extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(3, 3, 3)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCerrarsesion)
-                    .addComponent(btnInicio))
-                .addContainerGap(17, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(btnInicio)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnCerrarsesion)
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5)))
                 .addGap(47, 47, 47))
         );
         jPanel1Layout.setVerticalGroup(
@@ -98,7 +138,11 @@ public class Citas extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
+                .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -106,16 +150,18 @@ public class Citas extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnInicio)
-                        .addGap(43, 43, 43)
+                        .addGap(41, 41, 41)
                         .addComponent(btnCerrarsesion)
-                        .addGap(18, 18, 18)))
+                        .addGap(19, 19, 19)))
                 .addGap(35, 35, 35))
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 51, 51));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        btnAgendar.setBackground(new java.awt.Color(153, 255, 255));
         btnAgendar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnAgendar.setForeground(new java.awt.Color(0, 51, 51));
         btnAgendar.setText("AGENDAR");
         btnAgendar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +169,9 @@ public class Citas extends javax.swing.JFrame {
             }
         });
 
+        btnHistorialcitas.setBackground(new java.awt.Color(153, 255, 255));
         btnHistorialcitas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnHistorialcitas.setForeground(new java.awt.Color(0, 51, 51));
         btnHistorialcitas.setText("HISTORIAL DE CITAS");
         btnHistorialcitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +179,9 @@ public class Citas extends javax.swing.JFrame {
             }
         });
 
+        btnRecetas.setBackground(new java.awt.Color(153, 255, 255));
         btnRecetas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnRecetas.setForeground(new java.awt.Color(0, 51, 51));
         btnRecetas.setText("RECETAS");
         btnRecetas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +189,9 @@ public class Citas extends javax.swing.JFrame {
             }
         });
 
+        btnCitas.setBackground(new java.awt.Color(153, 255, 255));
         btnCitas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCitas.setForeground(new java.awt.Color(0, 51, 51));
         btnCitas.setText("CITAS");
         btnCitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,14 +239,14 @@ public class Citas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 811, Short.MAX_VALUE)
+            .addGap(0, 841, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 15, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, 0)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 15, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,10 +267,6 @@ public class Citas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnInicioActionPerformed
 
-    private void btnCerrarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarsesionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCerrarsesionActionPerformed
-
     private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAgendarActionPerformed
@@ -234,6 +282,18 @@ public class Citas extends javax.swing.JFrame {
     private void btnRecetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecetasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRecetasActionPerformed
+
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre1ActionPerformed
+
+    private void txtApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellido1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellido1ActionPerformed
+
+    private void btnCerrarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarsesionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCerrarsesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -284,5 +344,7 @@ public class Citas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField txtApellido1;
+    private javax.swing.JTextField txtNombre1;
     // End of variables declaration//GEN-END:variables
 }
